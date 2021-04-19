@@ -1,0 +1,27 @@
+git pull origin master
+git branch
+git status
+git add .
+git commit -m "initial commit"
+git log
+git push origin master
+<<<<<<< Updated upstream
+git config --global user.name "Eunice"
+git config --global user.name
+git config --global user.email eunice.kamau@hotmail.com
+git add .
+git log
+=======
+
+
+git config --global user.name ABLisa"
+git config --global user.name
+git config --global user.email johndoe@example.com
+git config --list
+>>>>>>> Stashed changes
+
+git config credential.helper store
+
+git remote add origin https://rajeev1234@bitbucket.org/rajeev1234/airlinereservationsystem.git
+
+

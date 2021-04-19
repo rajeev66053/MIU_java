@@ -1,0 +1,16 @@
+package assignment9.prob10C;
+
+import java.util.stream.Stream;
+
+public class MyIntStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Stream<Integer> myIntStream=Stream.of(91,52,83,34,45,76,7,98,69);
+		
+		System.out.println(myIntStream.mapToInt(Integer::intValue).max();
+
+	}
+
+}

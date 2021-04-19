@@ -1,0 +1,32 @@
+package system;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class Flight{
+	private final String id;
+	private String number;
+	private int capacity;
+	private Airport departureAirport;
+	private Airport arrivalAirport;
+	private LocalTime departureTime;
+	private LocalTime arrivalTime;	
+	List<FlightInstance> flightInstances;
+	
+	public Flight(String number, int capacity,Airport departureAirport, Airport arrivalAirport, LocalTime departureTime, LocalTime arrivalTime) {
+
+		super ( );
+
+		this.id = UUID.randomUUID().toString();
+		this.number = number;
+		this.capacity = capacity;
+		this.departureAirport = departureAirport;
+		this.arrivalAirport = arrivalAirport;
+		this.departureTime = departureTime;
+		this.arrivalTime = arrivalTime;
+		this.capacity = capacity;
+		flightInstances = new ArrayList<FlightInstance> ( );
+	}
+}

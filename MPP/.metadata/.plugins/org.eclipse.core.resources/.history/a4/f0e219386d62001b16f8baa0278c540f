@@ -1,0 +1,47 @@
+package lesson8.lecture.functionalprogramming;
+
+import java.util.*;
+import java.util.function.Consumer;
+
+public class MapFunctional2 {
+	List<String> list = new ArrayList<String>();
+	public void printAsUpperCase(List<String> strings) {
+		System.out.println(list);
+		strings.forEach(new TrimAndUpperCase(list));
+		System.out.println(list);
+		sort(list).forEach(new Print());
+		
+	}
+	
+	static class Print implements Consumer<String> {
+		public void accept(String s) {
+			System.out.println(s);
+		}
+	}
+	static List<String> sort(List<String> aList) {
+		Collections.sort(aList);
+		return aList;
+	}
+	
+	static class TrimAndUpperCase implements Consumer<String> {
+		TrimAndUpperCase(List<String> trimmedAndUpper) {
+			this.list1 = trimmedAndUpper;
+			
+		}
+		private List<String> list1;
+		
+		@Override
+		public void accept(String t) {
+			list1.add(t.trim().toUpperCase());
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+    	MapFunctional2 mf = new MapFunctional2();
+    	List<String> list = 
+    			Arrays.asList("billy", "tommy  ", " rick  ", "abdul", 
+    					"albert     ", "isaiah"); 
+    	mf.printAsUpperCase(list);
+    }
+}

@@ -1,0 +1,24 @@
+package assignment9.prob10C;
+
+import java.util.Comparator;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+public class MyIntStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Stream<Integer> myIntStream=Stream.of(91,52,83,34,45,76,7,98,69);
+		
+//		Optional<Integer> max = myIntStream.mapToInt(Integer::intValue).max();
+		
+		Optional<Integer> max = myIntStream.max(Comparator.naturalOrder());
+		
+//		Optional<Integer> max = myIntStream.reduce(Integer::max);
+		
+		System.out.println(max);
+
+	}
+
+}

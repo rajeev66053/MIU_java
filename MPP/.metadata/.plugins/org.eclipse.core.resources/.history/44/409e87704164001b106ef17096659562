@@ -1,0 +1,13 @@
+package assignment9.prob12;
+
+public class MySingletonOfNullable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MySingletonLazy.getInstance();
+		System.out.println(MySingletonLazy.getInstance());
+
+	}
+
+}

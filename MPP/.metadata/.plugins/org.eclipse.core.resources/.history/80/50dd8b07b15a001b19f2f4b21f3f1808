@@ -1,0 +1,43 @@
+package system;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import system.Address;
+import system.FlightInstance;
+
+import system.Person;
+
+public class Crew extends Person {
+	
+	private float salary;
+	private List<FlightInstance> flightlist = new ArrayList<>();
+	
+	public Crew(String firstName, String lastName, String email, LocalDate dateOfbirth, Address address,
+			float salary) {
+		super(firstName, lastName, email, dateOfbirth, address);
+		this.salary = salary;
+	}
+
+	public float getSalary() {
+		return salary;
+	}
+
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+
+	public List<FlightInstance> getFlightlist() {
+		return flightlist;
+	}
+
+	public void setFlightlist(FlightInstance flightlist) {
+		this.flightlist.add(flightlist);
+	}
+	
+	@Override
+	public String toString() {
+		return "Crew [salary=" + salary + "," + super.toString() + "]";
+	}
+}

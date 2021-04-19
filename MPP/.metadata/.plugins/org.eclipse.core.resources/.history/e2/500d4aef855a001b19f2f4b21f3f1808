@@ -1,0 +1,15 @@
+package asDB;
+import system.*;
+import java.util.List;
+
+public class Repository {
+	List<Airport> airports;
+	List<Airline> airlines;
+	List<Flight> flights;
+	List<FlightInstance> flightInstances;
+	List<Passenger> passengers;
+	List<Agent> agents;
+	List<Reservation> reservations;
+
+}
+

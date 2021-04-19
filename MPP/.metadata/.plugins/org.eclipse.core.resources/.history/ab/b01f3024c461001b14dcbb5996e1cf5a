@@ -1,0 +1,16 @@
+package sandbox;
+
+import java.util.stream.Stream;
+
+public class StreamTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Stream<Double> randoms =Stream.generate((() -> "Echo").limit(10);
+//		Stream<Double> randoms =Stream.generate(Math::random).limit(10);
+		randoms.forEach(System.out::println);
+
+	}
+
+}

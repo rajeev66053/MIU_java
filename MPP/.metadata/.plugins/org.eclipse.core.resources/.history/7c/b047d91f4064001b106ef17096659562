@@ -1,0 +1,5 @@
+package assignment9.prob12;
+
+public class MySingletonLazy {
+
+}

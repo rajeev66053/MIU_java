@@ -1,0 +1,114 @@
+
+
+import system.Airline;
+import system.Airport;
+import system.FlightInstance;
+import system.Passenger;
+import system.Reservation;
+import system.Ticket;
+import service.ReservationSystemFacade;
+import service.ReservationSystemFacadeImpl;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Scanner;
+
+import dto.DataSource;
+import service.ReservationSystemFacade;
+import service.ReservationSystemFacadeImpl;
+
+public class Application {
+
+	public static void main(String[] args) {
+		System.out.println("Airline Reservation System");
+		
+//		 Scanner sc = new Scanner(System.in); 
+//		  System.out.println("If you are Agent type A or type P if you are passenger?");
+//	      char name = sc.next().charAt(0);; 
+//
+//	        switch (name) {
+//				case 'A' :
+//					System.out.println("If you want to view Passenger type VP?");
+//			      break;
+//			   
+//			   case 'P' :
+//			      // Statements
+//			      break;
+//			   
+//			   default : 
+//			      // Statements
+//	        }
+	        
+		
+		ReservationSystemFacade dataSource = new ReservationSystemFacadeImpl();
+		
+		System.out.println("View Airport");
+		
+		String city="Fairfield";
+		String deparAiro="A1";
+		String arrivAiro="BI";
+		String date="2020-01-11";
+		String reservationCode="qwewq";
+		String flightNumber="ds";
+
+		if (!city.equals("")) {
+			for (Airport airport : dataSource.findAirportsByCity(city))
+				System.out.println(airport);
+				System.out.println("##############################################################################");
+
+			return;
+		}
+
+		if (deparAiro.equals("")) {
+			for (Airport airport : dataSource.findAllAirports())
+				System.out.println(airport);
+			System.out
+					.println("##############################################################################");
+
+		}
+		else {
+			System.out.println(dataSource.findAirportByAirportCode(deparAiro));
+			System.out
+					.println("##############################################################################");
+		}
+		
+		System.out.println("View Airlines");
+		
+		if (!deparAiro.equals("")) {
+			for (Airline airline : dataSource.findAirlinesByAirportCode(deparAiro))
+				System.out.println(airline);
+			System.out
+					.println("##############################################################################");
+
+		}
+		
+		System.out.println("List Flights");
+		
+		if (deparAiro.equals("") && !arrivAiro.equals("")
+				&& !date.equals("")) {
+
+			String date1 = date.getText();
+			LocalDate localDate = LocalDate.parse(date1);
+			
+			
+			List<FlightInstance> flightInstances = dataSource.findFlightsFromTo(deparAiro.getText(), arrivAiro.getText(), localDate);
+			
+			
+			for (FlightInstance flight : flightInstances) {
+				System.out.println(flight);					
+			}
+			
+			if (flightInstances.size() == 0) {
+				String msg = String.format("There is no any flight from %s to %s at %s ", 
+								deparAiro.getText(), arrivAiro.getText(), localDate);
+				System.out.println(msg);
+			}
+			
+			
+			System.out.println("##############################################################################");
+
+		}
+		
+	}
+
+}

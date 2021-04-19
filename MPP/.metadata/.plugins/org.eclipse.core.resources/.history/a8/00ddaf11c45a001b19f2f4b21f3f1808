@@ -1,0 +1,43 @@
+
+import com.miu.team3.object.Airport;
+
+import dto.DataSource;
+import service.ReservationSystemFacade;
+import service.ReservationSystemFacadeImpl;
+
+public class Application {
+
+	public static void main(String[] args) {
+		System.out.println("Airline Reservation System");
+		
+		ReservationSystemFacade dataSource = new ReservationSystemFacadeImpl();
+		
+		String city="Fairfield";
+		String deparAiro="A1";
+
+		if (!city.equals("") && deparAiro.equals("")) {
+			for (Airport airoport : dataSource.findAirportsByCity(city.getText()))
+				System.out.println(airoport);
+			System.out
+					.println("##############################################################################");
+
+			return;
+		}
+
+		if (deparAiro.getText().trim().equals("")) {
+			for (Airport airoport : dataSource.findAllAirports())
+				System.out.println(airoport);
+			System.out
+					.println("##############################################################################");
+
+		}
+
+		else {
+			System.out.println(dataSource.findAirportByAirportCode(deparAiro.getText()));
+			System.out
+					.println("##############################################################################");
+		}
+		
+	}
+
+}

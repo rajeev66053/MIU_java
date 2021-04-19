@@ -1,0 +1,60 @@
+package system;
+import java.util.UUID;
+
+import system.FlightInstance;
+import system.Passenger;
+import system.Reservation;
+
+import helper.Helper;
+public class Ticket {	
+	private String id;
+	private String number;
+	private Passenger passenger;
+	private FlightInstance flightInstance;
+	private Reservation reservation;
+
+	
+	public Ticket(Passenger passenger) {
+		this.id = this.number = UUID.randomUUID().toString();
+		this.passenger = passenger;
+	}
+	
+
+	public String getId() {
+		return id;
+	}
+	
+	public String getNumber() {
+		return number;
+	}
+
+	public Reservation getReservation() {
+		return reservation;
+	}
+	
+	public void setReservation(Reservation reservation) {
+		this.reservation = reservation;
+	}
+	
+	public FlightInstance getFlightinstance() {
+		return flightInstance;
+	}
+	
+	public void setFlightinstance(FlightInstance flightinstance) {
+		this.flightInstance = flightinstance;
+	}
+	
+	public Passenger getPassenger() {
+		return passenger;
+	}
+	
+	public void setPassenger(Passenger passenger) {
+		this.passenger = passenger;
+	}
+	
+	@Override
+	public String toString() {
+		return "Ticket [id=" + id + ", number=" + number + ", passenger=" + passenger + ", flightinstance="
+				+ flightinstance + "]";
+	}
+}

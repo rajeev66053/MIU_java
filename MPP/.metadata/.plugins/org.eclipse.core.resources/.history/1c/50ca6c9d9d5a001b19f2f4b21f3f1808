@@ -1,0 +1,14 @@
+package system;
+
+public class Agent {
+	String agentId;
+	String name;
+	
+	public Agent(String agentId, String name) {
+		super();
+		this.agentId = agentId;
+		this.name = name;
+	}
+
+
+}

@@ -1,0 +1,45 @@
+package system;
+import helper.Helper;
+public class Ticket {	
+	String id;
+	String ticketNumber;
+	Passenger passenger;
+	FlightInstance flightInstance;
+	Reservation reservation;
+
+	
+	public Ticket(FlightInstance flightInstance, Reservation reservation) {
+		ticketId = ticketNumber = Helper.generateTicketNumber();
+		this.flightInstance = flightInstance;
+		this.reservation = reservation;
+	}
+
+	public Ticket(Reservation reservation) {
+		this.reservation = reservation;
+		ticketId = ticketNumber = Helper.generateTicketNumber();
+	}
+	
+	public void setFlight(FlightInstance flight) {
+		this.flightInstance = flight;
+	}
+
+	public String getTicketId() {
+		return ticketId;
+	}
+
+	public String getTicketNumber() {
+		return ticketNumber;
+	}
+	
+	public Passenger getPassenger() {
+		return passenger;
+	}
+	
+	
+	@Override
+	   public String toString() {
+	        return ("id: " + this.ticketId +
+	        			",ticket number: " + this.ticketNumber
+	                    );
+	   }
+}

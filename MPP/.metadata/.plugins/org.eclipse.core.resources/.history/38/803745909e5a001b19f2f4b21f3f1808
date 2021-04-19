@@ -1,0 +1,28 @@
+package system;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Flight{
+	LocalTime departureTime;
+	LocalTime arrivalTime;
+	String flightId;
+	int capacity;
+	
+	Airport departureAirport;
+	Airport arrivalAirport;
+	List<FlightInstance> flightInstances;
+	
+	public Flight(LocalTime departureTime, LocalTime arrivalTime, String flightId, int capacity,
+			Airport departureAirport, Airport arrivalAirport) {
+		super ( );
+		this.departureTime = departureTime;
+		this.arrivalTime = arrivalTime;
+		this.flightId = flightId;
+		this.capacity = capacity;
+		this.departureAirport = departureAirport;
+		this.arrivalAirport = arrivalAirport;
+		flightInstances = new ArrayList<FlightInstance> ( );
+	}
+}

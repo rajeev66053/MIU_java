@@ -1,0 +1,21 @@
+package system;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Airline {
+	String airlineId;
+	String code;
+	String name;
+	String history;
+	List<Flight> flights;
+	
+	public Airline(String airlineId, String code, String name, String history) {
+		super();
+		this.airlineId = airlineId;
+		this.code = code;
+		this.name = name;
+		this.history = history;
+		this.flights = new ArrayList<Flight>(); // we don't have this field
+	}
+
+}

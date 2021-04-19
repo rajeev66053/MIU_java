@@ -1,0 +1,28 @@
+package system;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FlightInstance {
+	List<Reservation> reservations;
+	Flight flight;
+	String id;
+	LocalDate date;
+	List<String> crews;
+	List<String> pilots;
+	List<Ticket> tickets; // that is owend by diffrent passngers
+	
+	public FlightInstance(String id,Flight flight,LocalDate date) {
+		this.id = id;
+		this.date = date;
+		crews = new ArrayList<String>();
+		pilots = new ArrayList<String>();
+		tickets = new ArrayList<Ticket>();
+		reservations = new ArrayList<Reservation>();
+		if(flight != null) {
+			this.flight = flight;
+		}
+	}
+
+}

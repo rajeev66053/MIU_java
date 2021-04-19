@@ -1,0 +1,96 @@
+package system;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class Flight{
+	private final String id;
+	private String number;
+	private int capacity;
+	private Airport departureAirport;
+	private Airport arrivalAirport;
+	private LocalTime departureTime;
+	private LocalTime arrivalTime;	
+	List<FlightInstance> flightInstances;
+	
+	public Flight(String number, int capacity,Airport departureAirport, Airport arrivalAirport, LocalTime departureTime, LocalTime arrivalTime) {
+
+		super ( );
+
+		this.id = UUID.randomUUID().toString();
+		this.number = number;
+		this.capacity = capacity;
+		this.departureAirport = departureAirport;
+		this.arrivalAirport = arrivalAirport;
+		this.departureTime = departureTime;
+		this.arrivalTime = arrivalTime;
+		flightInstances = new ArrayList<FlightInstance>();
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public Airport getDepartureAirport(Airport departureAirport) {
+		return departureAirport;
+	}
+
+	public void setDepartureAirport(Airport departureAirport) {
+		this.departureAirport = departureAirport;
+	}
+	
+	public Airport getArrivalAirport(Airport arrivalAirport) {
+		return arrivalAirport;
+	}
+
+	public void setArrivalAirport(Airport arrivalAirport) {
+		this.arrivalAirport = arrivalAirport;
+	}
+	
+	public LocalTime getDepartureTime() {
+		return departureTime;
+	}
+
+	public void setDepartureTime(LocalTime departureTime) {
+		this.departureTime = departureTime;
+	}
+	
+	public LocalTime getArrivalTime() {
+		return departureTime;
+	}
+
+	public void setArrivalTime(LocalTime arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+	
+	public List<FlightInstance> getFlightInstance() {
+		return flightInstances;
+	}
+
+	public void setFlightInstance(FlightInstance flightInstance) {
+		this.flightInstances.add(flightInstance);
+	}
+
+	@Override
+	public String toString() {
+		return "Airport [id=" + id + ", code=" + code + ", name=" + name + ", Address=" + address + "]";
+	}
+}

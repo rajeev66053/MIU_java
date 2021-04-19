@@ -1,0 +1,34 @@
+package sandbox;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		Stream<String> randoms =Stream.generate(() -> "Echo").limit(10);
+		Stream<Double> randoms =Stream.generate(Math::random).skip(5).limit(10);
+		randoms.forEach(System.out::println);
+		
+		Stream<Character> combined =Stream.concat(characterStream("Hello"),characterStream("World"));
+		
+		combined.collect(Collectors.toList());
+		
+		combined.forEach(System.out::println);
+
+
+	}
+	
+	public static Stream<Character> characterStream(String s) {
+		List<Character> result = new ArrayList<>();
+		for (char c : s.toCharArray())
+		result.add(c);
+		return result.stream();
+		}
+
+
+}

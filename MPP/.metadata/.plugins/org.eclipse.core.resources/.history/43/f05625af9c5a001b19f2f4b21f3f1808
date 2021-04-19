@@ -1,0 +1,17 @@
+package system;
+
+public class Address {
+	String addressId;
+	String street;
+	String state;
+	String city;
+	String zip;
+	
+	public Address(String addressId, String street, String state, String city, String zip) {
+		this.addressId = addressId;
+		this.street = street;
+		this.state = state;
+		this.city = city;
+		this.zip = zip;
+	}
+}

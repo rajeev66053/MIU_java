@@ -1,0 +1,37 @@
+package assignment9.prob10C;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class MyIntStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		Stream<Integer> myIntStream=Stream.of(91,52,83,34,45,76,7,98,69);
+		
+//		Optional<Integer> max = myIntStream.mapToInt(Integer::intValue).max();
+		
+//		Optional<Integer> max = myIntStream.max(Comparator.naturalOrder());
+		
+//		Optional<Integer> max = myIntStream.reduce(Integer::max);
+		
+//		System.out.println(max);
+		
+		List<Integer> intList=Arrays.asList(91,52,83,34,45,76,7,98,69);
+		
+		IntSummaryStatistics summary =
+				intList.collect(Collectors.summarizingInt(Integer::intValue));
+				double maxValue = summary.getMax();
+				double MinValue = summary.getMin();
+				
+				System.out.println("Max and min value form list"+intList+" are:"+maxValue+ " "+MinValue);
+
+	}
+
+}

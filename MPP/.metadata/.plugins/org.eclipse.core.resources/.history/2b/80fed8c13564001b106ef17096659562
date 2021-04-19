@@ -1,0 +1,10 @@
+package assignment9.prob10B;
+
+public class StringStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

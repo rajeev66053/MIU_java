@@ -1,0 +1,95 @@
+
+
+import system.Airline;
+import system.Airport;
+import system.FlightInstance;
+import system.Passenger;
+import system.Reservation;
+import system.Ticket;
+import service.ReservationSystemFacade;
+import service.ReservationSystemFacadeImpl;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Scanner;
+
+import dto.DataSource;
+import service.ReservationSystemFacade;
+import service.ReservationSystemFacadeImpl;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Application {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to the Airline Reservation System");
+		
+<<<<<<< HEAD
+=======
+		//ReservationSystemFacade dataSource = new ReservationSystemFacadeImpl();
+
+		Scanner scan = new Scanner(System.in);
+		String userChoice;
+		System.out.println("Please select: \nP if you are a passenger \nA if you are an agent \nB if you are an Administrator \nE to exit application");
+
+		userChoice= scan.nextLine();
+		switch(userChoice.toUpperCase()){
+			case "P":
+				System.out.println("Please select what you want to do by entering the any of the letters given: " +
+						" \nEnter A to see a list of Airports \nEnter B to see a list of airlines \nEnter C to see a list of flights \nEnter D to see your reservations \nE to exit the application");
+				try{
+					userChoice= scan.nextLine();
+					switch (userChoice.toUpperCase()){
+						case "A":
+							System.out.println("Enter 1 to see a list of all airports \n Enter ");
+
+					}
+
+				}catch(Exception e){
+					System.out.println("Incorrect input. Please try again.");
+				}
+			case "A":
+
+			case "B":
+			case "E":
+				System.out.println("Exiting application...");
+				scan.close();
+			default:
+				System.out.println("Incorrect input. Please try again.");
+		}
+
+
+
+		
+		/*System.out.println("View Airport");
+		
+		String city="Fairfield";
+		String deparAiro="A1";
+*/
+//		if (!city.equals("") && deparAiro.equals("")) {
+//			for (Airport airport : dataSource.findAirportsByCity(city))
+//				System.out.println(airport);
+//			System.out.println("##############################################################################");
+//
+//			return;
+//		}
+//
+//		if (deparAiro.equals("")) {
+//			for (Airport airport : dataSource.findAllAirports())
+//				System.out.println(airport);
+//			System.out
+//					.println("##############################################################################");
+//
+//		}
+//
+//		else {
+//			System.out.println(dataSource.findAirportByAirportCode(deparAiro));
+//			System.out
+//					.println("##############################################################################");
+//		}
+		
+>>>>>>> c87d51a61b9e94f3f5663fe50385a6b2b61d1aa4
+	}
+
+}

@@ -1,0 +1,64 @@
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class PrimeStream {
+	
+	public static final  Stream<Integer> primes=Stream.iterate(2,n->getPrimeNumber(n));
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PrimeStream ps = new PrimeStream(); //PrimeStream is enclosing class
+		ps.printFirstNPrimes(10);
+		System.out.println("====");
+		ps.printFirstNPrimes(5);
+		
+		System.out.println(printFirstNPrimes(5));
+		
+//		System.out.println(primes.collect(Collectors.toList()));
+
+	}
+	
+	public static List<Integer> printFirstNPrimes(long n){
+		
+		return primes.limit(n).collect(Collectors.toList());
+		
+	}
+	
+	public static int getPrimeNumber(int N) {
+		
+		// Base case  
+        if (N <= 1) { 
+            return 2;  
+        }
+      
+        int prime = N;  
+        boolean found = false;
+        while (!found)  
+        {  
+            prime++;  
+      
+            if (isPrime(prime))  
+                found = true;  
+        }  
+      
+        return prime;  
+	}
+	
+	 static boolean isPrime(int n)  
+	    {  
+		    boolean flag = true;
+	          
+	        for (int i = 2; i <= n / 2; ++i) {
+	            // condition for nonprime number
+	            if (n % i == 0) {
+	              flag = false;
+
+	              break;
+	            }
+	          }
+	        return flag;
+	    }  
+
+}

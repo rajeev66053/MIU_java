@@ -1,0 +1,25 @@
+package system;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.miu.team3.object.Agent;
+import com.miu.team3.object.Passenger;
+
+public class Reservation {
+	List<Ticket> tickets;
+	List<FlightInstance> flightInstance;
+	private String reservationCode;
+	private Passenger passenger;
+	private Agent agent;
+	private boolean confirmed=false;
+
+	public Reservation(String reservationId, List<FlightInstance> flightInstance, String agentId, Passenger passenger) {
+		super();
+		this.reservationId = reservationId;
+		this.flightInstance = flightInstance;
+		this.agentId = agentId;
+		this.passenger = passenger;
+		this.tickets = new ArrayList<Ticket>();
+	}
+}

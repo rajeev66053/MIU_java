@@ -1,0 +1,13 @@
+package assignment9.prob12;
+
+public class MySingletonLazy {
+	
+	private static MySingletonLazy instance=null;
+	
+	public static MySingletonLazy getInstance() {
+		instance=new MySingletonLazy();
+		
+		return instance;
+	}
+
+}

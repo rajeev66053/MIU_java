@@ -1,0 +1,26 @@
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("hi everyone");
+		String i=generateRandom(20);
+		System.out.println(i);
+
+	}
+	
+	public static String generateRandom(int length) {
+	    Random random = new Random();	    
+
+	    char[] digits = new char[length];
+	    
+	    final int RADIX = 10;
+	    int digit = random.nextInt(9);
+			     
+	    for (int i = 1; i < length; i++) {
+	        digits[i] = Character.forDigit(i, RADIX);
+	    }
+	    return new String(digits);
+	}
+
+}

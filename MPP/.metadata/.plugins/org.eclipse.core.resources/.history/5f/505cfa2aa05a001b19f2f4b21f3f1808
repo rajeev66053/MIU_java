@@ -1,0 +1,73 @@
+package system;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class Flight{
+	private final String id;
+	private String number;
+	private int capacity;
+	private Airport departureAirport;
+	private Airport arrivalAirport;
+	private LocalTime departureTime;
+	private LocalTime arrivalTime;	
+	List<FlightInstance> flightInstances;
+	
+	public Flight(String number, int capacity,Airport departureAirport, Airport arrivalAirport, LocalTime departureTime, LocalTime arrivalTime) {
+
+		super ( );
+
+		this.id = UUID.randomUUID().toString();
+		this.number = number;
+		this.capacity = capacity;
+		this.departureAirport = departureAirport;
+		this.arrivalAirport = arrivalAirport;
+		this.departureTime = departureTime;
+		this.arrivalTime = arrivalTime;
+		this.capacity = capacity;
+		flightInstances = new ArrayList<FlightInstance>();
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+	public List<Flight> getFlight() {
+		return flights;
+	}
+
+	public void setFlight(Flight flight) {
+		this.flights.add(flight);
+	}
+
+	@Override
+	public String toString() {
+		return "Airport [id=" + id + ", code=" + code + ", name=" + name + ", Address=" + address + "]";
+	}
+}

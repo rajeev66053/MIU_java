@@ -1,0 +1,86 @@
+package system;
+
+import java.util.UUID;
+
+public class Address {
+	private final String id;
+	
+	private String street;
+	
+	private String city;
+	
+	private String state;
+	
+	private String zip;
+	
+	public Address(String street, String state, String city, String zip) {
+		this.id = UUID.randomUUID().toString();
+		this.street = street;
+		this.state = state;
+		this.city = city;
+		this.zip = zip;
+	}
+
+<<<<<<< Updated upstream
+	public String getAddressId() {
+		return addressId;
+=======
+	public String getId() {
+		return id;
+>>>>>>> Stashed changes
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+<<<<<<< Updated upstream
+	public String getState() {
+		return state;
+=======
+	public void setStreet(String street) {
+		this.street = street;
+>>>>>>> Stashed changes
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+<<<<<<< Updated upstream
+	public String getZip() {
+		return zip;
+	}
+=======
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [street=" + street + ", city=" + city + ", state=" + state + ", zip=" + zip + "]";
+	}
+	
+	
+	
+	
+	
+	
+>>>>>>> Stashed changes
+}

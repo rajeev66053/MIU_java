@@ -1,0 +1,99 @@
+package service;
+
+import java.time.LocalDate;
+import java.util.Collection;
+
+import com.miu.team3.dto.DataSource;
+import com.miu.team3.dto.DataSourceFactory;
+
+import system.Agent;
+import system.Airline;
+import system.Airport;
+import system.Flight;
+import system.Passenger;
+import system.Reservation;
+import repository.ReservationSystemRepository;
+
+public class ReservationSystemServiceImpl implements ReservationSystemService {
+	
+	private DataSource dataSource = DataSourceFactory.getDataSource();
+	
+	private ReservationSystemRepository repository;
+	
+	ReservationSystemServiceImpl(ReservationSystemRepository repository) {
+		super();
+		this.repository = repository;
+	}
+
+	@Override
+	public Collection<Airport> findAllAirports() {
+		return repository.findAllAirports();
+	}
+
+	@Override
+	public Airport findAirportByAirportCode(String airportCode) {
+		return repository.findAirportByAirportCode(airportCode);
+	}
+
+	@Override
+	public Collection<Airport> findAirportsByCity(String city) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<Airline> findAirlinesByAirportCode(String airportCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Collection<Reservation> findReservationsByPassengerId(Integer passengerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<Passenger> findPassengersByAgentCode(String agentCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Reservation createReservation(Passenger passenger, Collection<Flight> flights) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Reservation createReservation(Agent agent, Passenger passenger, Collection<Flight> flights) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void confirmReservation(String reservationCode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancelReservation(String reservationCode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Collection<Flight> findFlightsFromTo(String departure, String arrival, LocalDate flightDate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void confirmReservation(String reservationCode, String agentCode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
