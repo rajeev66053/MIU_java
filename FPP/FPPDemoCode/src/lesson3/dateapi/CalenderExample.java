@@ -18,7 +18,7 @@ public class CalenderExample {
 		System.out.println("Day: " + day);
 		month = quizDay.get(Calendar.MONTH) +1;
 		System.out.println("Month: " + month);
-
+		
 		// Make the quiz 2 days earlier
 		// Get the new date
 		quizDay.add(Calendar.DAY_OF_MONTH, 2);

@@ -1,5 +1,7 @@
 package lesson11.needoverridehashcode;
 
+import java.util.Objects;
+
 public class Pair {
 	String first;
 	String second;
@@ -8,7 +10,7 @@ public class Pair {
 		second = s;
 	}
 	
-	/*public boolean equals(Object ob) {
+	public boolean equals(Object ob) {
 		if(ob == null) return false;
 		if(ob.getClass() != getClass()) return false;
 		Pair p = (Pair)ob;
@@ -16,13 +18,15 @@ public class Pair {
 	}
 	
 	public int hashCode() {
-		int result = 17; //seed
-		int hashFirst = first.hashCode();
-		int hashSecond = second.hashCode();
-		result += 31 * result + hashFirst;
-		result += 31 * result + hashSecond;
-		return result;
+//		int result = 17; //seed
+//		int hashFirst = first.hashCode();
+//		int hashSecond = second.hashCode();
+//		result += 31 * result + hashFirst;
+//		result += 31 * result + hashSecond;
+//		return result;
 		
-	}*/
+		return Objects.hash(first,second);
+		
+	}
 
 }

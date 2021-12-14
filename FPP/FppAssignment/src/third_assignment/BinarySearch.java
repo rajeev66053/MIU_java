@@ -50,8 +50,10 @@ public class BinarySearch {
 //			return searchTarget(numArray,target,startPosition,endPosition);
 //		}
 		
+		
 		counter++;
 		int mid = (startPosition + endPosition) / 2;
+		
 		if (counter > numArray.length || mid >= numArray.length) {
 			return -1;
 		}

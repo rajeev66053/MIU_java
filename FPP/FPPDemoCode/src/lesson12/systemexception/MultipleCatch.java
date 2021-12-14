@@ -1,5 +1,7 @@
 package lesson12.systemexception;
 
+import java.util.Arrays;
+
 public class MultipleCatch {
 
 		public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class MultipleCatch {
 			try
 			{
 				arr[0]= 12;
-			System.out.printf("The 6th element is %d \r\n", arr[6]);
+				System.out.printf("The 6th element is %d \r\n", arr[6]);
 			}
 			catch(ArrayIndexOutOfBoundsException e)
 			{

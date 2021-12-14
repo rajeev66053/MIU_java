@@ -26,7 +26,7 @@ public class Main {
 		
 		for(Shape s:shapes) {
 			totalShapeArea+=s.calculateArea();
-			totalShapePerimeter=s.calculatePerimeter();
+			totalShapePerimeter+=s.calculatePerimeter();
 			
 		}
 		

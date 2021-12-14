@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-07-04T15:41:18.338075300Z</date>
+  <millis>1625413278338</millis>
+  <nanos>75300</nanos>
+  <sequence>0</sequence>
+  <logger>lesson12exceptionhandling.logging</logger>
+  <level>WARNING</level>
+  <class>lesson12.logging.Triangle</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Illegal sizes of sides passed in</message>
+</record>
+</log>

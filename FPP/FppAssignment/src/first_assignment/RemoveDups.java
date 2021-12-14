@@ -8,7 +8,7 @@ public class RemoveDups {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String[] animalDups= {"horse", "dog", "cat", "horse","dog"};
+		String[] animalDups= {"horse", "horse","dog", "dog", "cat", "horse","dog"};
 		
 
 		System.out.println(Arrays.toString(animalDups));
@@ -69,14 +69,20 @@ public class RemoveDups {
 		String[] temp = new String[animalDups.length];
 		int count=0;
 		for(String animal:animalDups) {
+
 			boolean exist=false;
-			for(int i=0;i<=count;i++) {
+			
+			if(temp.length>0) {
 				
-				if(temp[i]==animal) {
-					exist=true;
-					break;
-				}
+				for(String tempValue :temp) {
+					
+					if(tempValue==animal) {
+						exist=true;
+						break;
+					}
+				}				
 			}
+			
 
 			if(!exist) {
 				temp[count]=animal;

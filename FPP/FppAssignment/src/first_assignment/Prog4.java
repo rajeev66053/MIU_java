@@ -8,8 +8,8 @@ public class Prog4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub		
-		/*
-		Scanner sc=new Scanner(System.in);
+		
+		/*Scanner sc=new Scanner(System.in);
 		System.out.println("Number of String?");
 		int numberOfString=sc.nextInt();
 

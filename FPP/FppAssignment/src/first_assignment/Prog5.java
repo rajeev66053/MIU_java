@@ -10,11 +10,16 @@ public class Prog5 {
 		int[] a= {5,6,-4,3,1};
 		int[] b= {3,8,9,11};
 		
+		/*int alength= a.length;
+		int blength=b.length;
+		int[] c= new int[alength+blength];
+		
+		System.arraycopy(a, 0, c, 0, alength);
+		System.arraycopy(b, 0, c, alength, blength);
+		System.out.println(Arrays.toString(c));*/
+		
 
 		int res[] = combine(a,b);
-		
-		/*System.arraycopy(a, 0, c, 0, alength);
-		System.arraycopy(b, 0, c, alength, blength);*/
 		
 		System.out.println(Arrays.toString(res));
 

@@ -14,8 +14,8 @@ public class MainDeep {
 		Person p3 = (Person) p1.clone(); 
 		System.out.println("Copy : " + p3);
 
-		System.out.println("CHANGE MANUFACTURER IN P1"); 
-		p1.computer.setManufacturer("Apple");
+		System.out.println("CHANGE MANUFACTURER IN P3"); 
+		p3.computer.setManufacturer("Apple");
 		 
 		System.out.println();
 

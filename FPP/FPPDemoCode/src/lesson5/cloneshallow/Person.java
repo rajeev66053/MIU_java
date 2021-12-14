@@ -36,7 +36,7 @@ public class Person implements Cloneable
       @Override
 	  public Person clone() throws CloneNotSupportedException {
 
-    	  Person clone=(Person)super.clone();
+    	 Person clone=(Person)super.clone();
 	     return clone;
 
 	  }

@@ -8,7 +8,7 @@ class Rectangle {
     	//System.out.println();
     	// First statement should be constructor calling
     	this(15, 10, 15, 10);
-       // Rectangle(10,5,10,5);//Constructor called only using this.
+//        Rectangle(10,5,10,5);//Constructor called only using this.
         
     }
     public int getX() {

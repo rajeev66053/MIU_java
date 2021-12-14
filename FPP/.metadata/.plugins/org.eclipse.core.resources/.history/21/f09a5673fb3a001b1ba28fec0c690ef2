@@ -1,6 +1,0 @@
-package seventh_assignment1;
-
-public interface EmployeeData {
-	String getName();
-	double getSalary();
-}

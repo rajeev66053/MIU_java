@@ -16,7 +16,7 @@ public class StaticExample {
 		}
 		
 		System.out.println("Number of instances so far =" + instance.getCount());
-		//System.out.println(StaticExample.count);
+//		System.out.println(StaticExample.count);
 
 	}
 

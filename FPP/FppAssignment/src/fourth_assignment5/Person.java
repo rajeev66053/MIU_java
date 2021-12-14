@@ -9,13 +9,22 @@ public class Person implements Cloneable {
 	public Person(String name, Computer computer) { 
 		super();
 
-		this.name = name; this.computer = computer;
+		this.name = name; 
+		this.computer = computer;
 	}
 
 	protected Object clone() throws CloneNotSupportedException { 
-		Person clone = (Person) super.clone();
-
-		return clone;
+		
+//		For shallow clone
+//		return super.clone();
+		
+		//For Deep clone
+		
+		Person person = (Person) super.clone();
+		
+		person.computer=(Computer) computer.clone();
+		
+		return person;
 
 	}
 

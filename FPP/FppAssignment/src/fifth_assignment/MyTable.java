@@ -21,7 +21,6 @@ public class MyTable {
 	//returns the String that is matched with char c in the table
 	public String get(char c){
 		//implement
-		int index = (int)c;
 		Entry e = entries[getIndex(c)];
 		return e.str;
 	}

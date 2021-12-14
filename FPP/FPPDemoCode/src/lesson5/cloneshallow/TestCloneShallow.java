@@ -1,8 +1,5 @@
 package lesson5.cloneshallow;
 
-import lesson5.clonedeep.Address;
-import lesson5.clonedeep.Person;
-
 public class TestCloneShallow {
 	public static void main(String[] args) throws CloneNotSupportedException 
 	{

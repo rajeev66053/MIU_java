@@ -41,7 +41,8 @@ public class Computer implements Cloneable {
 
 	public double computePower() {
 
-		double res = this.getRamSize() * this.getProcessorSpeed(); return res;
+		double res = this.getRamSize() * this.getProcessorSpeed(); 
+		return res;
 
 	}
 
@@ -57,44 +58,44 @@ public class Computer implements Cloneable {
 
 	}
 
-	@Override
+//	@Override
+//
+//	public int hashCode() { 
+//		int hash = 5;
+//
+//		// User defined formula 
+//		int result = 1;
+//
+//		result = hash * result + (manufacturer.hashCode() + processor.hashCode()); 
+//		result = hash * result + (ramSize + diskSize);
+//
+//		long temp = Double.doubleToLongBits(processorSpeed);
+//		result = hash * result + (int) (temp ^ (temp >>> 32));
+//		return result;
+//
+//	}
 
-	public int hashCode() { 
-		int hash = 5;
-
-		// User defined formula 
-		int result = 1;
-
-		result = hash * result + (manufacturer.hashCode() + processor.hashCode()); 
-		result = hash * result + (ramSize + diskSize);
-
-		long temp = Double.doubleToLongBits(processorSpeed);
-		result = hash * result + (int) (temp ^ (temp >>> 32));
-		return result;
-
-	}
-
-	@Override
-
-	public boolean equals(Object obj) {
-
-		if (obj == null) {
-
-			return false;
-		}
-
-		if (this.getClass() != obj.getClass()) { 
-			return false;
-		}
-
-		Computer other = (Computer) obj;
-
-		boolean isEqual = manufacturer.equals(other.manufacturer) && processor.equals(other.processor)
-
-				&& (ramSize == other.ramSize) && (diskSize == other.diskSize) && processorSpeed == other.processorSpeed;
-		return isEqual;
-
-	}
+//	@Override
+//
+//	public boolean equals(Object obj) {
+//
+//		if (obj == null) {
+//
+//			return false;
+//		}
+//
+//		if (this.getClass() != obj.getClass()) { 
+//			return false;
+//		}
+//
+//		Computer other = (Computer) obj;
+//
+//		boolean isEqual = manufacturer.equals(other.manufacturer) && processor.equals(other.processor)
+//
+//				&& (ramSize == other.ramSize) && (diskSize == other.diskSize) && processorSpeed == other.processorSpeed;
+//		return isEqual;
+//
+//	}
 
 	protected Object clone() throws CloneNotSupportedException {
 		Computer clone = (Computer) super.clone();
